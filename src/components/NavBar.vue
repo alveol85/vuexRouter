@@ -1,36 +1,84 @@
 <template>
     <div class="space">
-        <div class="order-type">
-            <span class="green-box"></span>
-            <h1>PEDIDO VERDE:</h1>
-            <p>RESERVAMOS LOS PRODUCTOS PARA TI</p>
+        <div class="viewLine">
+            <div>
+                <img :src="require('@/assets/NavBar/'+navBar.imageOne)" alt="Pedido">
+            </div>
+            <div>
+                <hr :class="[navBar.activeLineOne ? 'lineStepTurnOn' : 'lineStepTurnOff' ]" />
+            </div>
+
+            <div>
+                <img :src="require('@/assets/NavBar/'+navBar.imageTwo)" alt="Pedido">
+            </div>
+            <div>
+                <hr :class="[navBar.activeLineTwo ? 'lineStepTurnOn' : 'lineStepTurnOff' ]" />
+            </div>
+
+            <div>
+                <img :src="require('@/assets/NavBar/'+navBar.imageThree)" alt="Pedido">
+            </div>
+            <div>
+                <hr :class="[navBar.activeLineThree ? 'lineStepTurnOn' : 'lineStepTurnOff' ]" />
+            </div>
+
+            <div>
+                <img :src="require('@/assets/NavBar/'+navBar.imageFour)" alt="Pedido">
+            </div>
+            <div>
+                <hr :class="[navBar.activeLineFour ? 'lineStepTurnOn' : 'lineStepTurnOff' ]" />
+            </div>
+
+            <div>
+                <img :src="require('@/assets/NavBar/'+navBar.imageFive)" alt="Pedido">
+            </div>
+            <div>
+                <hr :class="[navBar.activeLineFive ? 'lineStepTurnOn' : 'lineStepTurnOff' ]" />
+            </div>
+
+            <div>
+                <img :src="require('@/assets/NavBar/'+navBar.imageSix)" alt="Pedido">
+            </div>
         </div>
-    
-        <div class="bradcumbs">
-            <div class="item active">
-                <div class="img">
-                    <img ng-src="{{'images/pedido.png' | contextpath}}" alt="Pedido">
-                </div>
-                <span>PEDIDO</span>
-            </div>
-    
-            <div class="line" ></div>
-    
-            <div class="item" ng-class="{active: vm.$location.path() === '/order-offer' || vm.$location.path() === '/orderdetail' || vm.$location.path() === '/orderstatus' || vm.$location.path() === '/finalizeorderstatus' || vm.$location.path() === '/landing-page'}">
-                <div class="img">
-                    <img >
-                </div>
-                <span>SUPERGANGAS</span>
-            </div>
-    
-            <div class="line" ></div>
-    
-            <div class="item" ng-class="{active: vm.$location.path() === '/orderdetail' || vm.$location.path() === '/orderstatus' || vm.$location.path() === '/finalizeorderstatus' || vm.$location.path() === '/landing-page'}">
-                <div class="img">
-                    <img >
-                </div>
-                <span>DETALLE DEL PEDIDO</span>
-            </div>
-         </div>
     </div>
 </template>
+
+
+<script>
+export default {
+    name: 'NavBar',
+    props: {
+        msg: String
+    },
+    computed: {
+        navBar() {
+            return this.$store.getters.navBar;
+        }
+    }
+}
+</script>
+
+<style scoped>
+img {
+    width: 40px;
+    height: 40px;
+}
+.viewLine div {
+    display: inline-block;
+}
+
+.lineStepTurnOn  {
+    height: 3px;
+    width: 40px;
+    background-color: black;
+    margin-bottom: 40%;
+}
+
+.lineStepTurnOff {
+    height: 3px;
+    width: 40px;
+    background-color: grey;
+    margin-bottom: 40%;
+}
+
+</style>

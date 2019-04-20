@@ -1,6 +1,6 @@
 <template>
-    <div>   
-        <h1>Login contador {{contador}}</h1>
+    <div>  
+        <h1>Paso 3</h1> 
         <NavBar />
     </div>
 </template>
@@ -15,10 +15,6 @@ export default {
     NavBar
   },
   computed: {
-    contador() {
-      // return this.$store.state.count;
-      return this.$store.getters.count;
-    }
   }
 };
 </script>

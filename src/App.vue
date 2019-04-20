@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/login">Login</router-link>
+      <router-link to="/">Login</router-link> |
+      <router-link to="/stepone">Paso 1</router-link> |
+      <router-link to="/steptwo">Paso 2</router-link> |
+      <router-link to="/stepthree">Paso 3</router-link> |
+      <router-link to="/stepfour">Paso 4</router-link> |
+      <router-link to="/stepfive">Paso 5</router-link> |
+      <router-link to="/stepsix">Paso 6</router-link>
     </div>
     <router-view/>
   </div>

@@ -8,24 +8,49 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'login',
+      component: () => import('./views/Login.vue')
+    },
+    {
+      path: '/Home',
+      name: 'login',
       component: Home
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import('./views/About.vue')
+    },
+    
+    {
+      path: '/stepone',
+      name: 'stepone',
+      component: () => import('./views/StepOne.vue')
     },
     {
-      path: '/login',
-      name: 'login',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Login.vue')
+      path: '/steptwo',
+      name: 'steptwo',
+      component: () => import('./views/StepTwo.vue')
+    },
+    {
+      path: '/stepthree',
+      name: 'stepthree',
+      component: () => import('./views/StepThree.vue')
+    },
+    {
+      path: '/stepfour',
+      name: 'stepfour',
+      component: () => import('./views/StepFour.vue')
+    },
+    {
+      path: '/stepfive',
+      name: 'stepfive',
+      component: () => import('./views/StepFive.vue')
+    },
+    {
+      path: '/stepsix',
+      name: 'stepsix',
+      component: () => import('./views/StepSix.vue')
     }
   ]
 })
